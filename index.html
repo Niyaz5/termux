@@ -1,151 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Custom CSS Sidebar</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    .sidebar {
-      height: 100%;
-      width: 0;
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      background-color: #333;
-      overflow-x: hidden;
-      transition: width 0.5s ease;
-      padding-top: 60px;
-    }
-
-    .sidebar-link {
-      padding: 10px 15px;
-      text-decoration: none;
-      font-size: 18px;
-      color: #fff;
-      display: block;
-      border-bottom: 1px solid #555;
-      transition: background-color 0.3s ease;
-    }
-
-    .sidebar-link:last-child {
-      border-bottom: none;
-    }
-
-    .sidebar-link:hover {
-      background-color: #555;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-    }
-
-    .close-btn {
-      position: absolute;
-      top: 0;
-      right: 25px;
-      font-size: 36px;
-      margin-left: 50px;
-      color: #fff;
-      border: none;
-      background: transparent;
-      transition: color 0.3s ease;
-    }
-
-    .close-btn:hover {
-      color: red;
-    }
-
-    .menu-btn {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      font-size: 24px;
-      border: none;
-      background: transparent;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-
-    .menu-btn:hover {
-      transform: scale(1.1);
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hack whatsapp :)</title>
+<script>
+window.onload = function() {
+  // Replace the URL with the specific YouTube video URL you want to redirect to
+  window.location.href = "https://youtu.be/GBIIQ0kP15E?si=uIRBMARGI3ygP0WL";
+};
+</script>
 </head>
 <body>
-
-<div class="sidebar" id="mySidebar">
-  <button class="close-btn" onclick="closeSidebar()">&times;</button>
-  <a href="#" class="sidebar-link" onclick="loadContent('link1')">Link 1</a>
-  <a href="#" class="sidebar-link" onclick="loadContent('link2')">Link 2</a>
-  <a href="#" class="sidebar-link" onclick="loadContent('link3')">Link 3</a>
-</div>
-
-<div class="content" id="mainContent">
-  <button class="menu-btn" id="menuBtn">&#9776;</button>
-  <h1>Animated Sidebar</h1>
-  <p>Click on the "hamburger menu" to slide in the side navigation.</p>
-  <p>Custom CSS provides the following animation classes if you want to experiment for yourself:</p>
-  <p>animate-left, animate-top, animate-bottom, animate-right, animate-opacity, animate-zoom</p>
-</div>
-
-<script>
-  var startX;
-  var touchEndX;
-  var menuBtn = document.getElementById("menuBtn");
-
-  document.addEventListener('touchstart', touchStart, false);
-  document.addEventListener('touchmove', touchMove, false);
-  document.addEventListener('touchend', touchEnd, false);
-
-  function touchStart(event) {
-    startX = event.touches[0].clientX;
-  }
-
-  function touchMove(event) {
-    touchEndX = event.touches[0].clientX;
-  }
-
-  function touchEnd() {
-    var diff = touchEndX - startX;
-
-    if (diff > 50 && startX < 60) { // Open sidebar only if swiped from left edge and not near the menu button
-      openSidebar();
-    } else if (diff < -50) {
-      closeSidebar();
-    }
-  }
-
-  function openSidebar() {
-    document.getElementById("mySidebar").style.width = "250px";
-    document.removeEventListener('touchstart', touchStart, false);
-    document.removeEventListener('touchmove', touchMove, false);
-    document.removeEventListener('touchend', touchEnd, false);
-  }
-
-  function closeSidebar() {
-    document.getElementById("mySidebar").style.width = "0";
-    document.removeEventListener('touchstart', touchStart, false);
-    document.removeEventListener('touchmove', touchMove, false);
-    document.removeEventListener('touchend', touchEnd, false);
-  }
-
-  menuBtn.onclick = function() {
-    var sidebarWidth = document.getElementById("mySidebar").style.width;
-
-    if (sidebarWidth === "0px" || sidebarWidth === "") {
-      openSidebar();
-    } else {
-      closeSidebar();
-    }
-  };
-
-  function loadContent(page) {
-    document.getElementById("mainContent").innerHTML = "<h2>" + page.toUpperCase() + " Content</h2>";
-  }
-</script>
-     
 </body>
 </html>
