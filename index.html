@@ -25,26 +25,23 @@
       box-shadow: 4px 5px 5px grey;
     }
 
-    h2{
+    h2 {
       color: white;
       font-family: 'Times New Roman', Times, serif;
       margin-left: 5px;
       height: 30px;
-      
     }
-    
-    
-    h3{
-      font-size: 9.7px;
+
+    h3 {
+      font-size: 9.2px;
       color: white;
       margin-left: -90px;
       margin-top: 0px;
       white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
-    
+
     input[type="text"],
     input[type="password"],
     button {
@@ -75,27 +72,21 @@
       <input type="text" id="username" placeholder="Username" required>
       <input type="password" id="password" placeholder="Password" required>
       <button type="submit">Login</button>
- <h3
-  style="color: white;
-  cursor: auto;
-  text-decoration: none"
-  ><a href="https://t.me/niyyaz" style="color: skyblue; text-decoration: ;
-  ">trouble to login contact</a>/
- before make sure entered pass is correct!</h3>
+      <h3 style="color: white; cursor: auto; text-decoration: none;"><a href="https://t.me/niyyaz" style="color: skyblue;">Trouble logging in? Contact</a>/ before make sure entered pass is correct!</h3>
     </form>
   </div>
 
   <script>
     document.getElementById('loginForm').addEventListener('submit', function(event) {
       event.preventDefault();
-      var username = documen.getElementById('username').value;
+      var username = document.getElementById('username').value;
       var password = document.getElementById('password').value;
 
       // Example validation (replace with your own)
       if (username === 'admin' && password === 'password') {
         // Redirect to another page
-        window.location.href = 'feedback.html';
-        alert('successfully logged in!');
+        window.location.href = 'prank.html';
+        alert('Successfully logged in!');
       } else {
         alert('Invalid username or password');
       }
