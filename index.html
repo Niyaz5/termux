@@ -23,14 +23,28 @@
       border: 1px solid;
       border-radius: 5px;
       box-shadow: 4px 5px 5px grey;
-      
     }
+
     h2{
       color: white;
       font-family: 'Times New Roman', Times, serif;
       margin-left: 5px;
+      height: 30px;
+      
     }
-
+    
+    
+    h3{
+      font-size: 9.7px;
+      color: white;
+      margin-left: -90px;
+      margin-top: 0px;
+      white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      
+    }
+    
     input[type="text"],
     input[type="password"],
     button {
@@ -45,38 +59,43 @@
       padding: 10px 20px 10px 20px;
       cursor: pointer;
       border-radius: 5px;
-      
     }
 
     button:hover {
-      transform:(background-color: transparent;
+      background-color: transparent;
       color: white;
       border: 1px solid white;
-      
     }
   </style>
 </head>
 <body>
   <div class="login-container">
-    <h2>Login</h2>
+    <h2>Login</h2>  
     <form id="loginForm">
       <input type="text" id="username" placeholder="Username" required>
       <input type="password" id="password" placeholder="Password" required>
       <button type="submit">Login</button>
+ <h3
+  style="color: white;
+  cursor: auto;
+  text-decoration: none"
+  ><a href="https://t.me/niyyaz" style="color: skyblue; text-decoration: ;
+  ">trouble to login contact</a>/
+ before make sure entered pass is correct!</h3>
     </form>
   </div>
 
   <script>
     document.getElementById('loginForm').addEventListener('submit', function(event) {
       event.preventDefault();
-      var username = document.getElementById('username').value;
+      var username = documen.getElementById('username').value;
       var password = document.getElementById('password').value;
 
       // Example validation (replace with your own)
       if (username === 'admin' && password === 'password') {
         // Redirect to another page
         window.location.href = 'mainp.html';
-        alert('successfully logged in!)
+        alert('successfully logged in!');
       } else {
         alert('Invalid username or password');
       }
