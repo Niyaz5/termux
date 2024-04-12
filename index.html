@@ -7,32 +7,37 @@
   <style>
     body {
       font-family: Arial, sans-serif;
+      background-image: url('Anonymous Wallpaper HD for Iphone.jpeg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      backdrop-filter: blur(2px);
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       margin: 0;
     }
+    
 
     .login-container {
       text-align: center;
       display: flex;
       width: 330px;
-      background-color: rgba(0, 0, 0, 0.7);
-      border: 1px solid;
+      background-color: rgba(0, 0, 0, 0.0);
+      border: 1px solid transparent;
       border-radius: 5px;
-      box-shadow: 4px 5px 5px grey;
+    
     }
 
     h2 {
-      color: white;
+      color: grey;
       font-family: 'Times New Roman', Times, serif;
       margin-left: 5px;
       height: 30px;
     }
 
     h3 {
-      font-size: 9.7px;
+      font-size: 9.2px;
       color: white;
       margin-left: -90px;
       margin-top: 0px;
@@ -46,10 +51,16 @@
     button {
       margin: 10px;
       padding: 7px;
+      background-color: rgba(0, 0, 0, 0.2);
+      border: 1px solid #616161;
+      border-radius: 5px;
+      backdrop-filter: blur(10px);
+      color: #BEBEBE;
+      
     }
 
     button {
-      background-color: white;
+      background-color: #616161;
       color: black;
       border: 1px solid black;
       padding: 10px 20px 10px 20px;
@@ -58,20 +69,21 @@
     }
 
     button:hover {
-      background-color: transparent;
+      background-color: rgba(0, 0, 0, 0.1);
       color: white;
-      border: 1px solid white;
+      border: 1px solid #616161;
     }
   </style>
 </head>
 <body>
+
   <div class="login-container">
     <h2>Login</h2>  
     <form id="loginForm">
       <input type="text" id="username" placeholder="Username" required>
       <input type="password" id="password" placeholder="Password" required>
       <button type="submit">Login</button>
-      <h3 style="color: white; cursor: auto; text-decoration: none;"><a href="https://t.me/niyyaz" style="color: skyblue;">Trouble logging in? Contact</a> before make sure entered pass is correct!</h3>
+      <h3 style="color: white; cursor: auto; text-decoration: none;"><a href="https://t.me/niyyaz" style="color: skyblue;">Trouble logging in? Contact</a>/ before make sure entered pass is correct!</h3>
     </form>
   </div>
 
@@ -88,7 +100,7 @@
         alert('Successfully logged in!');
       } else {
         alert('Invalid username or password');
-      } 
+      }
     });
   </script>
 </body>
