@@ -21,7 +21,7 @@
       overflow-x: hidden;
       transition: width 0.3s ease;
       padding-top: 60px;
-      box-shadow: 1px 3px 4.5px grey;
+      box-shadow: 1px 3px 50px black;
     }
 
     .sidebar-link {
@@ -106,7 +106,9 @@
       text-align: center;
       padding: 20px;
       background-color: #444;
-      box-shadow: -2px -2px 5px grey;
+      box-shadow: -0px -0px 10px black;
+      border: 1px grey;
+      
     }
 
     
@@ -159,15 +161,8 @@
     margin-left: 0px;
     font-family: 'Times New Roman', Times, serif;o
   }
-  #report{
-    margin-left: 0px;
-    margin-top: 10px;
-    resize: none;
-    border: 2px solid black;
-    border-radius: 5px;
-    font-family: 'Times New Roman', Times, serif
-    
-  }
+
+  
   #btn-report{
     background-color: white;
     padding: 6px 25px 6px 25px;
@@ -181,7 +176,14 @@
     border: 2px solid white;
     color: green;
   }
-  
+  #message{
+      color: black;
+      background-color: white;
+      border: 1px solid #444;
+      border-radius: 5px;
+      outline: none;
+      
+    }
 
     
   </style>
@@ -189,7 +191,7 @@
 <body>
 
 <div class="sidebar" id="mySidebar">
-  <img class="img" src="Anonymous Wallpaper HD for Iphone.jpeg">
+  <img class="img" src="/Anonymous Wallpaper HD for Iphone.jpeg">
   
   <button class="close-btn" onclick="closeSidebar()">&times;</button>
   
@@ -197,12 +199,12 @@
   <a href="mainp.html" class="sidebar-link">Home</a>
   <a href="#" class="sidebar-link" >Applications
   <a href="#" class="sidebar-link" >Commands</a>
-    <a href="#" class="sidebar-link" >Tools</a>
+    <a href="/tools.html" class="sidebar-link" >Tools</a>
   <a href="#" class="sidebar-link" >Gadgets</a>
 
   <a style="color: red;" href="#" class="sidebar-link">Hacking</a>
     <a style="color: red" href="#" class="sidebar-link">Darkweb</a>
-  <a href="feedback.html" class="sidebar-link">Feedback</a>
+  <a href="/feedback.html" class="sidebar-link">Feedback</a>
 
     
   
@@ -210,8 +212,8 @@
   <div class="account-section">
     
     <ul>
-      <li id="profile"><a href="https://github.com/Niyaz5">Profile</a></li>
-      <li id="profile"><a href="settings.html">Settings</a></li>
+      <li id="profile"><a href="#">Profile</a></li>
+      <li id="profile"><a href="/settings.html">Settings</a></li>
     
     </ul>
     <h1 
@@ -221,7 +223,7 @@
       cursor: auto;
       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
       text-decoration: none"
-    ><a href="https://github.com/Niyaz5" style="color: inherit; text-decoration: none; font-family: 'Times New Roman', Times, serif;">HACK3R © 2024</h1></a>
+    ><a href="#" style="color: inherit; text-decoration: none; font-family: 'Times New Roman', Times, serif;">HACK3R © 2024</h1></a>
     
   </div>
   
@@ -243,7 +245,7 @@
   <div class="report-container">
     
   
- <form action="https://formspree.io/f/xvoerkzq" method="POST">
+ <form action="">
    <h2
    style="font-size: 20px;
    font-family: 'Times New Roman', Times, serif; color: white"
@@ -251,7 +253,9 @@
    >Write you're Feedback</h2>
    <input type="email" class="input-email" name="email" placeholder="E-mail" required>
    
-   <textarea name="message" id="report" cols="33" rows="8" placeholder="message" required></textarea>
+  
+   
+    <textarea style="resize: none" name="feedback" id="message" cols="33" rows="9"  placeholder="write your feedback!" required></textarea>
    
    <button type="submit" id="btn-report">submit</button>
   
