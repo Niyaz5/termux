@@ -10,6 +10,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
+      background-color: #ddd;
     }
 
     .sidebar {
@@ -105,17 +106,20 @@
   top: 15px;
   right: 20px;
   display: inline-block;
+  
 }
 
-.dropbtn {
+i {
   background-color: transparent;
   color: black;
-  font-size: 25px;
+  font-size: 0px;
   border: none;
   cursor: pointer;
+  margin-top: 10px;
+  
 }
-.dropbtn:hover{
-  background-color: grey;
+i:hover{
+  background-color: transparent;
 }
 
 .dropdown-content {
@@ -128,6 +132,7 @@
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   border-radius: 10px;
+  
 }
 
 .dropdown-content a {
@@ -135,6 +140,7 @@
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  
 }
 
 
@@ -147,8 +153,8 @@
   display: block;
 }
 
-.dropdown:hover .dropbtn {
-  background-color: #555;
+.dropdown:hover i {
+  background-color: transparent;
   
 }
     
@@ -158,6 +164,7 @@
       bottom: 50px;
       left: 0;
       width: 100%;
+      height: 108px;
       text-align: center;
       padding: 20px;
       background-color: #444;
@@ -186,32 +193,48 @@
       color: #aaa;
     }
     #profile{
-      padding-right: 100px;
+      padding-right: 150px;
 
     }
 
-
-    
+  #profile, i{
+    margin-right: 5px;
+    color: white;
+    font-size: 15px;
+  }
+  #settings{
+    padding-right: 160px;
+  }
+  
+  #settings, i{
+    margin-right: 5px;
+  }
+  #main-gear{
+    font-size: 20px;
+  }
   </style>
 </head>
 <body>
-
+<audio id="clickSound" src="clickbutton2.2.mp3" class="hidden"></audio>
 <div class="sidebar" id="mySidebar">
   <img class="img" src="Anonymous Wallpaper HD for Iphone.jpeg">
   
   <button class="close-btn" onclick="closeSidebar()">&times;</button>
   
   
-  <a href="mainp.html" class="sidebar-link">Home</a>
-  <a href="#" class="sidebar-link" >Applications
-  <a href="#" class="sidebar-link">Basic Commands</a>
-    <a href="#" class="sidebar-link" >Tools</a>
-  <a href="#" class="sidebar-link" >Gadgets</a>
+  <a href="main.html" class="sidebar-link" onclick="playClickSound()">Home</a>
+  <a href="#" class="sidebar-link"  onclick="playClickSound()">Applications
+  <a href="#" class="sidebar-link"onclick="playClickSound()">Commands</a>
+    <a href="#" class="sidebar-link" onclick="playClickSound()">Tools</a>
+  <a href="#" class="sidebar-link" onclick="playClickSound()">Gadgets</a>
 
-  <a style="color: red;" href="#" class="sidebar-link">Hacking</a>
+  <a style="color: red;" href="#" class="sidebar-link"
+  onclick="playClickSound()">Hacking</a>
 
-    <a style="color: red" href="#" class="sidebar-link">Darkweb</a>
-  <a href="/feedback.html" class="sidebar-link">Feedback</a>
+    <a style="color: red" href="#" class="sidebar-link"
+    onclick="playClickSound()">Darkweb</a>
+  <a href="feedback.html" class="sidebar-link"
+  onclick="playClickSound()">Feedback</a>
 
   
   <div style="width: 99%;
@@ -220,15 +243,24 @@
               border: 1px solid transparent; color: white;
               
               ">
+    <h3
+    style="font-size: 13px;
+          position: absolute; left: 10px;"
+    >Install a terminal we prefer to use termux</h3>
     
-  <a href="HACK3R.apk" 
+  <a href="#" 
       style="color: skyblue;
              text-decoration: none;
             position: absolute;
             top:480px;
             left: 55px;
-            font-family: 'Times New Roman', Times, serif;">install termux</a>
-    
+            font-family: 'Times New Roman', Times, serif;">install termux
+            <i class="fa-solid fa-terminal" style="
+            color: white;"></i></a>
+    <h4 style="font-size: 13px;
+    position: absolute;
+    top: 500px; left: 25%;
+    letter-spacing: 3px; color: red;">coming soon!</h4>
     
   </div>
   <!-- Account section -->
@@ -236,8 +268,10 @@
     
     <ul>
       
-      <li id="profile"><a href="https://github.com/Niyaz5">Profile</a></li>
-      <li id="profile"><a href="settings.html">Settings</a></li>
+      <li id="profile"><a href="https://github.com/Niyaz5">
+        <i class="fa-solid fa-user"></i>Developer</a></li>
+      <li id="settings"><a href="settings.htmm">
+        <i class="fa-solid fa-gear"></i>Settings</a></li>
     
     </ul>
     <h1 
@@ -263,21 +297,37 @@
     
 </div>
   <div class="dropdown">
-  <button class="dropbtn">&#8286;</button>
-  <i class="fa-brands fa-instagram"></i>
+
+  <i class="fa-solid fa-gear" id="main-gear"
+   onclick="playClickSound()"></i>
   <div class="dropdown-content">
-    <a href="#">Profile</a>
-    <a href="#">Tools</a>
-    <a href="#">Developer</a>
-    <a href="#">Help</a>
-    <a href="#">Subscribe!</a>
-    <a href="#">More..</a>
+    <a href="#">
+          <i class="fa-solid fa-circle-user"></i>
+Profile</a>
+    <a href="#">
+      <i class="fa-solid fa-wrench"></i>Tools</a>
+  
+    <a href="https://t.me/@ni.yyaz/">
+      <i class="fa-solid fa-circle-question"></i>Help</a>
+    <a href="#">
+      <i class="fa-solid fa-handshake"></i>Subscribe!</a>
+    
   </div>
 </div>
 </div>
  
-   
+<script>
+  const audio = document.getElementById('clickSound');
 
+  audio.addEventListener('canplaythrough', function() {
+    // Audio is ready to play
+  });
+
+  function playClickSound() {
+    audio.currentTime = 0; // Reset audio to start
+    audio.play();
+  }
+</script>
 
 
 <script>
